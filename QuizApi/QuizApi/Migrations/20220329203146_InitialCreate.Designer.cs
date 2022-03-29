@@ -11,8 +11,8 @@ using QuizApi.Models;
 namespace QuizApi.Migrations
 {
     [DbContext(typeof(QuizDbContext))]
-    [Migration("20220329151259_initial create")]
-    partial class initialcreate
+    [Migration("20220329203146_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
