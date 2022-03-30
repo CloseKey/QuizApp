@@ -23,7 +23,7 @@ export default function Result() {
         const qna = context.selectedOptions
           .map(x => ({
             ...x,
-            ...(res.data.find(y => y.qnId == x.qnId))
+            ...(res.data.find(y => y.qnId === x.qnId))
           }))
         setQnAnswers(qna)
         calculateScore(qna)
@@ -34,7 +34,7 @@ export default function Result() {
 
   const calculateScore = qna => {
     let tempScore = qna.reduce((acc, curr) => {
-      return curr.answer == curr.selected ? acc + 1 : acc;
+      return curr.answer === curr.selected ? acc + 1 : acc;
     }, 0)
     setScore(tempScore)
   }
