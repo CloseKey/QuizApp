@@ -6,7 +6,7 @@ import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import { red, green,grey } from '@mui/material/colors';
 
 export default function Answer({qnAnswers}) {
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = useState(false);
 
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
